@@ -1,5 +1,7 @@
 import getProfileData from "./data";
 import { BiLock } from "react-icons/bi";
+import avatar from "./assets/avatar.png";
+import cover from "./assets/cover.png";
 function App() {
   const profileData = getProfileData();
 
@@ -16,23 +18,26 @@ function App() {
   //   max = Math.floor(max);
   //   return Math.floor(Math.random() * (max - min + 1) + min);
   // };
-
+if(profileData){
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
-        <div className="relative ">
-          <div className="p-10 sticky top-0 left-0">
+      <div className="w-full overflow-hidden hidden md:block lg:block" style={{height: "200px"}}>
+        <img src="https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1129&q=80" alt="Cover" className="h-full w-full object-cover" />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4">
+        <div className="relative md:p-10 lg:p-10">
+          <div className="p-5 sticky top-0 left-0 md:-mt-32 lg:-mt-32 bg-white rounded md:shadow lg:shadow">
             <div className="text-center">
               <img
-                src="https://media-exp1.licdn.com/dms/image/C4D03AQGCWjBjyysFog/profile-displayphoto-shrink_200_200/0/1632125517175?e=1639612800&v=beta&t=kEvCuIsxCcfwkBfaMOMZrqkqVSFR7PJBfEfXgOCxQBc"
+                src={avatar}
                 alt="avatar"
                 className="mb-2 rounded-full w-20 h-20 object-cover mx-auto"
               />
-              <p class="text-xl font-bold pb-2">{profileData.name}</p>
-              <p class="text-sm italic text-gray-600 pb-5">
+              <p className="text-xl font-bold pb-2">{profileData.name}</p>
+              <p className="text-sm italic text-gray-600 pb-5">
                 {profileData.intro}
               </p>
-              <p class="text-sm mb-5">{profileData.bio}</p>
+              <p className="text-sm mb-5">{profileData.bio}</p>
               <p className="text-sm text-gray-500 mb-5">
                 {profileData.location}
               </p>
@@ -49,19 +54,19 @@ function App() {
               <div className="flex">
                 <p className="w-1/2 text-left">Students</p>
                 <p className="w-1/2 text-right">
-                  {profileData.students.length}
+                  {profileData.students?.length}
                 </p>
               </div>
               <div className="flex">
                 <p className="w-1/2 text-left">Projects</p>
                 <p className="w-1/2 text-right">
-                  {profileData.projects.length}
+                  {profileData.projects?.length}
                 </p>
               </div>
               <div className="flex">
                 <p className="w-1/2 text-left">Cources</p>
                 <p className="w-1/2 text-right">
-                  {profileData.certifications.length}
+                  {profileData.certifications?.length}
                 </p>
               </div>
               <div className="flex">
@@ -80,7 +85,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="lg:col-span-4 relative">
+        <div className="md:col-span-2 lg:col-span-3 relative">
           <header className="text-gray-600 body-font sticky top-0 bg-white bg-opacity-80 z-50">
             <div className="flex flex-wrap p-5 flex-col md:flex-row items-center">
               <nav className="flex flex-wrap items-center text-base">
@@ -121,7 +126,7 @@ function App() {
                   <div className="w-full md:w-full lg:w-1/3 p-5">
                     <div className="relative">
                       <div
-                        className={`bg-gradient-to-t from-gray-800 hover:from-gray-900 via-transparent to-transparent text-white w-full h-full absolute transition-colors cursor-pointer filter border-dashed`}
+                        className={`bg-gradient-to-t from-gray-800 hover:from-gray-900 via-transparent to-transparent text-white w-full h-full absolute transition-colors cursor-pointer`}
                       >
                         <div className="absolute bottom-4 left-4">
                           <h1 className="font-bold text-sm">{project.name}</h1>
@@ -139,10 +144,9 @@ function App() {
                         </div>
                       </div>
                       <img
-                        className="h-96 w-full object-cover rounded"
+                        className="h-52 w-full object-cover rounded"
                         src={project.imageUrl}
                         alt=""
-                        srcset=""
                       />
                     </div>
                   </div>
@@ -154,6 +158,8 @@ function App() {
       </div>
     </div>
   );
+}
+return <></>;
 }
 
 export default App;
