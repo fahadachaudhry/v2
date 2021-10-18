@@ -5,22 +5,22 @@ import Projects from "./components/Projects";
 const routes = [
   {
     name: "Projects",
-    path: "/projects",
+    path: "/v2/projects",
     component: <Projects />
   },
   {
     name: "Experience",
-    path: "/experience",
+    path: "/v2/experience",
     component: <Experiences />
   },
   {
     name: "Certifications",
-    path: "/certifications",
+    path: "/v2/certifications",
     component: <Course />
   },
   {
     name: "Skills",
-    path: "/skills",
+    path: "/v2/skills",
     component: <Projects />
   },
 ];

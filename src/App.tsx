@@ -87,14 +87,14 @@ function App() {
                 exact
                 path="/"
                 render={() => {
-                  return <Redirect to="/projects" />;
+                  return <Redirect to="/v2/projects" />;
                 }}
               />
               <Route
                 exact
                 path="/v2"
                 render={() => {
-                  return <Redirect to="/projects" />;
+                  return <Redirect to="/v2/projects" />;
                 }}
               />
               {
