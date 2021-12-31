@@ -18,6 +18,11 @@ const routes = [
     path: "/v2/skills",
     component: <Course />
   },
+  {
+    name: "Projects",
+    path: "/",
+    component: <Projects />
+  },
 ];
 
 export default {
