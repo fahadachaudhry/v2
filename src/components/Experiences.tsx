@@ -11,7 +11,7 @@ function Experiences() {
           <div className="relative pb-5 grid lg:grid-cols-5 px-5 md:px-1 border-l border-solid border-gray-200">
             <div className="w-2 h-2 bg-gray-200 rounded-full absolute top-2 -ml-1 left-0"></div>
             <div className="pl-5">
-              <h1 className="text-gray-900">{p.position}</h1>
+              <h1 className="text-gray-900 font-bold">{p.position}</h1>
               <p className="text-sm text-gray-500 italic">{p.companyName}</p>
               <p className="text-xs text-gray-500 mb-3">{p.startDate} - {p.endDate}</p>
             </div>

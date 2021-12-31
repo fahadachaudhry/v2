@@ -78,7 +78,7 @@ export interface IProfile {
 
 const profile: IProfile = {
   name: "Shahzada Fahad Ashraf",
-  intro: "Pro Bono Programming Career Consultant and Full Stack Developer",
+  intro: "Full Stack Dev @ConradLabs | Teaching people to be self-taught programmers",
   location: "Lahore, Pakistan",
   students: [
     {

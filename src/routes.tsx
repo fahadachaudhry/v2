@@ -14,14 +14,9 @@ const routes = [
     component: <Experiences />
   },
   {
-    name: "Certifications",
-    path: "/v2/certifications",
-    component: <Course />
-  },
-  {
-    name: "Skills",
+    name: "Skills & Courses",
     path: "/v2/skills",
-    component: <Projects />
+    component: <Course />
   },
 ];
 

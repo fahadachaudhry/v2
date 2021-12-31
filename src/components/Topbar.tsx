@@ -6,7 +6,7 @@ function Topbar() {
   const location = useLocation();
   const routes = routesList.getRoutes();
   return (
-    <header className="text-gray-600 body-font sticky top-0 bg-white bg-opacity-80 z-50">
+    <header className="text-gray-600 body-font sticky top-0 bg-white bg-opacity-80 z-50 -ml-2">
       <div className="flex flex-wrap py-5 flex-col md:flex-row items-center">
         <nav className="flex flex-wrap items-center text-base">
           {
